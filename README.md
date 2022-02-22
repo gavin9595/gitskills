@@ -1,2 +1,2 @@
 # gitskills
-leaning git is fun & simple
+leaning git is fun and simple
