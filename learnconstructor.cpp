@@ -1,38 +1,27 @@
 #include <iostream>
-
 using namespace std;
 
-class Line{
+class circle{
 
     public:
-    void setValue(double var);
-    double returnvalue(void);
-    Line(double x);
-
+    circle(double rad);
+    double area();
     private:
-    double length;
+    double radius;
 };
 
-Line::Line(double x)
+circle::circle(double rad)
 {
-  cout <<"a new object is created, and value is " << x << endl;
-
+   radius = rad;
 }
 
-void Line::setValue(double var)
+double circle::area()
 {
-    length = var;
-}
-
-double Line::returnvalue(void)
-{
-    return length;
+    return 3.14*radius*radius;
 }
 
 int main(){
 
-   Line newcase(8);
-   newcase.setValue(11);
-   cout<<"a new value is set "<<newcase.returnvalue()<<endl;
-    return 0;
+    circle cir(2);
+    cout<<"the area is "<< cir.area()<<endl;
 }
