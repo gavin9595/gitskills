@@ -6,6 +6,7 @@ class application
 public:
     static void f();
     static void g();
+    friend void printtest(application app);
 private:
     static double a;
 };
@@ -19,9 +20,15 @@ void application::g()
 {
     cout<<a<<endl;
 }
+void printtest(application app)
+{
+    cout<<app.a+5<<endl;
+}
 int main(){
 application app;
+app.f();
 app.g();
+printtest(app);
 cout<<"area is "<<area(4)<<endl;
 return 0;
 }
